@@ -23,6 +23,11 @@ class Database():
     result = self.cur.execute(query)
     return result.fetchall()
 
+  def get_workspaces(self):
+    query = "SELECT workspace FROM vscode_workspaces GROUP BY workspace"
+    result = self.cur.execute(query)
+    return result.fetchall()
+
 
 # create_table()
 # create_table()
