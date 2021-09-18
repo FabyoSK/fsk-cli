@@ -29,7 +29,3 @@ class Database():
     return result.fetchall()
 
 
-# create_table()
-# create_table()
-# add_path("samba", "~/chuvaio/samba_web", "samba")
-
