@@ -5,9 +5,6 @@ def main():
 
   subparsers = parser.add_subparsers()
 
-  from code import add_subcommand_code
-  add_subcommand_code(subparsers)
+  from ..modules import code
+  code.add_subcommand_code(subparsers)
 
-if __name__ == "__main__":
-    # calling the main function
-    main()
