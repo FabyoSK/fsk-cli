@@ -1,5 +1,5 @@
 import sys
-from fsk.cli.scripts.main import main
+from fsk.cli.scripts.main import cli
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(cli())
