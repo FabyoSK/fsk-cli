@@ -9,17 +9,17 @@ class Code:
         os.system(f'code {path}')
         print(f'opening {path} in VSCode')
 
-    def open_workspace(self, data):
-        workspace = data[0]
+    def open_workspace(self, workspace):
         paths = db.get_paths_by_enviroment(workspace)
-
-        workspace = ""
-
-        for path in paths:
-            workspace =  " ".join(path)
-            os.system(f'code {workspace}')
-
-        print(f'workspace open successfully')
+        
+        if paths:
+            workspace = ""
+            for path in paths:
+                workspace =  " ".join(path)
+                os.system(f'code {workspace}')
+            print(f'workspace open successfully')
+        else: 
+            print(f'No workspace found')
         
     def create_workspace(self, name, paths):
         db.add_paths_to_workspace(paths, name)
@@ -33,4 +33,4 @@ class Code:
             for workspace in workspaces:
                 print("=> " + " ".join(workspace))
         else:
-            print("No workspaces")
+            print("No workspaces found")
