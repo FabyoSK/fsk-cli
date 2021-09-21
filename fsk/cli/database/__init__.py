@@ -2,7 +2,7 @@ import sqlite3
 
 class Database():
   def __init__(self):
-    self.con = sqlite3.connect('fsk.db')
+    self.con = sqlite3.connect("fsk.db")
     self.cur = self.con.cursor()
     self.create_table()
 
@@ -27,9 +27,5 @@ class Database():
     query = "SELECT workspace FROM vscode_workspaces GROUP BY workspace"
     result = self.cur.execute(query)
     return result.fetchall()
-
-
-# create_table()
-# create_table()
-# add_path("samba", "~/chuvaio/samba_web", "samba")
+  
 
