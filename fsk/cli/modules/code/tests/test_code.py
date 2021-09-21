@@ -1,7 +1,5 @@
-import pytest
 from fsk.cli.utils.testing import run_cli
 from fsk.cli.scripts.main import cli
-
 
 def test_entrypoint():
     result = run_cli(cli, ["code"])
